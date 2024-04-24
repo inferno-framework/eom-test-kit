@@ -1,5 +1,7 @@
 require_relative './version'
 require_relative './resource_tests/resource_test_group'
+require_relative './bundle_tests/post_bundle_test_group'
+require_relative './bundle_tests/manual_entry_bundle_test_group'
 
 module EOMTestKit
     class EOMTestSuite < Inferno::TestSuite
@@ -26,6 +28,8 @@ module EOMTestKit
             request.query_parameters["id"]
         end
 
+        group from: :eom_post_bundle_group
+        group from: :eom_manual_entry_bundle_group
         group from: :eom_resource_test_group
     end
 end
