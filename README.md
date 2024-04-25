@@ -1,39 +1,31 @@
-# Inferno Template Test Kit
+# Enhancing Oncology Model Inferno Test Kit
+This is an Inferno Test Kit for the Enhancing Oncology Model (EOM) FHIR Implementation Guide. It is designed to test 
+the structure of FHIR resources against the definitions set forth by the IG. 
 
-Inferno template [Inferno](https://github.com/inferno-community/inferno-core) Test Kit
-for FHIR testing.
+The Enhancing Oncology Model (EOM) is a Center for Medicare and Medicaid Innovation (CMMI) (Innovation Center) alternative 
+payment model designed to promote high quality, person-centered care, advance health equity, encourage better care coordination, 
+improve access to care, reduce costs, and improve outcomes for Medicare fee-for-service (FFS) beneficiaries with cancer who receive 
+cancer treatment. EOM builds on lessons from the Oncology Care Model (OCM) and shares certain features with OCM, including 
+episode-based payments that financially incentivize physician group practices (PGPs) to improve care and lower costs.
 
-## Instructions for Developing Your Test Kit
+## Available Tests
+- **Bundle POST Test:** This test allows users to submit an EOM FHIR Bundle resource using an API platform such as Postman 
+via a POST request. The Test Kit will recieve the request, then validate the structure of the bundle, as well as the resouces
+the bundle contains.
+- **Bundle Manual Input Test:** This test allows users to submit an EOM FHIR Bundle resource directly to the Test Kit. 
+Users will input the bundle either as a JSON string, or will provide a URL to where the json is being hosted, if applicable. 
+The kit with then validate the structure of the bundle, as well as the resouces the bundle contains.
+- **Individual Resource Test:** This test allows users to submit any EOM FHIR resource directly to the Test Kit, bypassing the 
+bundle process. Users will input their resources either as a JSON string, or will provide a URL to where the json is being hosted, 
+if applicable. The kit with then validate the structure of all resources submitted. Only one resource of each type is allowed per run.
 
-Refer to the Inferno documentation for information about [setting up
-your development environment and running your Test Kit](https://inferno-framework.github.io/docs/getting-started/).
-
-More information about what is included in this repository can be [found here](https://inferno-framework.github.io/docs/getting-started/repo-layout-and-organization.html).
+## Issue Reporting
+If users experiences issues with the test kit, such as an unexpected error message or a mismatched validation, please report 
+the issue by opening a New Issue on the Issues page of this GitHub repository. In the description, please provide a brief summary 
+of the issue, as well as a screenshot of the Test Kit where the issue was observed.
 
 ## Documentation
+- [Enhancing Oncology Model Implementation Guide](https://build.fhir.org/ig/FirelyTeam/enhancing-oncology-model-ig/index.html)
 - [Inferno documentation](https://inferno-framework.github.io/docs/)
 - [Ruby API documentation](https://inferno-framework.github.io/inferno-core/docs/)
 - [JSON API documentation](https://inferno-framework.github.io/inferno-core/api-docs/)
-
-## Example Inferno Test Kits
-
-A list of all Test Kits registered with the Inferno Team can be found on the [Test Kit Registry](https://inferno-framework.github.io/community/test-kits.html) page.
-
-## License
-Copyright 2024 TODO
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at
-```
-http://www.apache.org/licenses/LICENSE-2.0
-```
-Unless required by applicable law or agreed to in writing, software distributed
-under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied. See the License for the
-specific language governing permissions and limitations under the License.
-
-## Trademark Notice
-
-HL7, FHIR and the FHIR [FLAME DESIGN] are the registered trademarks of Health
-Level Seven International and their use does not constitute endorsement by HL7.
