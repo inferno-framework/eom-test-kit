@@ -3,7 +3,7 @@ require_relative '../version'
 module EOMTestKit
     class ValidatePatientBundleContentsTest < Inferno::Test
         id :eom_validate_patient_bundle_contents_test
-        title 'Validate EOM Patient Bundle'
+        title 'Validate EOM Patient Bundle Contents'
         description %(
             Test takes the Bundle resource submitted to the read test, and validates 
             each resource within the bundle, confirming whether they conform to 

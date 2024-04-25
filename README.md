@@ -10,13 +10,13 @@ episode-based payments that financially incentivize physician group practices (P
 
 ## Available Tests
 - **Bundle POST Test:** This test allows users to submit an EOM FHIR Bundle resource using an API platform such as Postman 
-via a POST request. The Test Kit will recieve the request, then validate the structure of the bundle, as well as the resouces
+via a POST request. The Test Kit will receive the request, then validate the structure of the bundle, as well as the resources
 the bundle contains.
 - **Bundle Manual Input Test:** This test allows users to submit an EOM FHIR Bundle resource directly to the Test Kit. 
-Users will input the bundle either as a JSON string, or will provide a URL to where the json is being hosted, if applicable. 
-The kit with then validate the structure of the bundle, as well as the resouces the bundle contains.
+Users will input the bundle either as a JSON string, or will provide a URL to where the JSON is being hosted, if applicable. 
+The kit with then validate the structure of the bundle, as well as the resources the bundle contains.
 - **Individual Resource Test:** This test allows users to submit any EOM FHIR resource directly to the Test Kit, bypassing the 
-bundle process. Users will input their resources either as a JSON string, or will provide a URL to where the json is being hosted, 
+bundle process. Users will input their resources either as a JSON string, or will provide a URL to where the JSON is being hosted, 
 if applicable. The kit with then validate the structure of all resources submitted. Only one resource of each type is allowed per run.
 
 ## Issue Reporting

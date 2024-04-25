@@ -3,8 +3,8 @@ module EOMTestKit
         id :eom_post_patient_bundle_test
         title 'Receive EOM Patient Bundle Resource via POST request'
         description %(
-            Test waits for a patient bundle json to be posted at the 
-            provided location. Test passes if it recieves a post
+            Test waits for a patient bundle JSON to be posted at the 
+            provided location. Test passes if it receives a POST
             request within 3 mins of test start.
         )
 
@@ -30,7 +30,7 @@ module EOMTestKit
 
                     If the test times out or is cancelled for any reason, rerunning the test group will restart the timeout.
 
-                    Your request body MUST be your Patient Bundle in raw json format. Testing will resume automatically after a valid POST is received.
+                    Your request body MUST be your Patient Bundle in raw JSON format. Testing will resume automatically after a valid POST is received.
                 )
             )
         end
