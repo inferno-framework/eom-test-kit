@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module EOMTestKit
     class PostBundleTest < Inferno::Test
         id :eom_post_patient_bundle_test
@@ -10,23 +12,14 @@ module EOMTestKit
 
         receives_request :patient_bundle
 
-        def id_gen
-            output = ''
-            ranNum = Random.new
-            for _ in 1..10
-                output += ranNum.rand(10).to_s
-            end
-            output
-        end
-
         run do
-            session_id = id_gen
+            session_id = SecureRandom.urlsafe_base64(10)
             wait(
                 identifier: session_id,
                 timeout: 300,
                 message: %(
                     Post your Patient Bundle JSON to the following URL:
-                    #{Inferno::Application['base_url']}/custom/eom/postHere?id=#{session_id}
+                    #{Inferno::Application['base_url']}/custom/eom_test_suite/postHere?id=#{session_id}
 
                     If the test times out or is cancelled for any reason, rerunning the test group will restart the timeout.
 

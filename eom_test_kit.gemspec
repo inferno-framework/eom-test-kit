@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name          = 'eom'
+  spec.name          = 'eom_test_kit'
   spec.version       = '0.1.0'
   spec.authors       = ['Leap Orbit']
   spec.email         = ['ltucker@leaporbit.com']

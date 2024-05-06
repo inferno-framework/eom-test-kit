@@ -33,7 +33,7 @@ module EOMTestKit
             if applicable. The kit with then validate the structure of all resources submitted. Only one resource of each type is allowed per run.
         )
 
-        id :eom
+        id :eom_test_suite
         version EOM_VERSION
 
         validator do
@@ -42,7 +42,7 @@ module EOMTestKit
 
         # Example urls generated here
         # localhost root url is: http://localhost:4567/custom/eom
-        bundle_ex = File.read(File.join(__dir__, '../sample_resources/patient_bundle.json'))
+        bundle_ex = File.read(File.join(__dir__, 'sample_resources/patient_bundle.json'))
         bundle_ex_route_handler = proc { [200, { 'Content-Type' => 'application/json' }, [bundle_ex]] }
         route(:get, "/sample_resources/patient_bundle", bundle_ex_route_handler)
 
