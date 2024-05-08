@@ -54,11 +54,11 @@ module EOMTestKit
         links [
             {
                 label: 'Report Issue',
-                url: 'https://github.com/ljtucker/EOM-Inferno-Test-Kit/issues'
+                url: 'https://github.com/inferno-framework/eom-test-kit/issues'
             },
             {
                 label: 'Open Source',
-                url: 'https://github.com/ljtucker/EOM-Inferno-Test-Kit'
+                url: 'https://github.com/inferno-framework/eom-test-kit'
             },
             {
                 label: 'Enhancing Oncology Model IG',
