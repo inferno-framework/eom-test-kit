@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eom (0.1.0)
+    eom_test_kit (0.1.0)
       inferno_core (~> 0.4.34)
 
 GEM
@@ -314,7 +314,7 @@ PLATFORMS
 DEPENDENCIES
   database_cleaner-sequel (~> 1.8)
   debug
-  eom!
+  eom_test_kit!
   factory_bot (~> 6.1)
   foreman
   rerun

@@ -6,7 +6,7 @@ module EOMTestKit
         title 'Validate EOM Patient Bundle'
         description %(
             Test takes the Bundle resource submitted to the read test, and validates 
-            whether it conforms to its mCODE Lite Structure Definition.
+            whether it conforms to its EOM Structure Definition.
         )
 
         def data_scratch
