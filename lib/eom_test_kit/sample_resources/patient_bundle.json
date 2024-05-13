@@ -1,433 +1,481 @@
 {
-    "resourceType" : "Bundle",
-    "id" : "eom-patient-bundle-jane-anyperson",
-    "type" : "collection",
-    "entry" : [
-      {
-        "fullUrl" : "http://example.org/fhir/Patient/cancer-patient-jane-anyperson",
-        "resource" : {
-          "resourceType" : "Patient",
-          "id" : "cancer-patient-jane-anyperson",
-          "text" : {
-            "status" : "extensions",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_cancer-patient-jane-anyperson\"> </a><p><b>Generated Narrative: Patient</b><a name=\"cancer-patient-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;cancer-patient-jane-anyperson&quot; </p></div><p><b>US Core Birth Sex Extension</b>: M</p><p><b>identifier</b>: Patient's Medicare number/1EG4-TE5-MK73\u00a0(use:\u00a0USUAL)</p><p><b>name</b>: Jane B. Anyperson </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1951-01-20</p><p><b>address</b>: 234 Anyway St Anytown 12345 US </p></div>"
-          },
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-              "valueCode" : "M"
-            }
-          ],
-          "identifier" : [
-            {
-              "use" : "usual",
-              "type" : {
-                "coding" : [
-                  {
-                    "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-                    "code" : "MC",
-                    "display" : "Patient's Medicare number"
-                  }
-                ]
-              },
-              "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "value" : "1EG4-TE5-MK73"
-            }
-          ],
-          "name" : [
-            {
-              "family" : "Anyperson",
-              "given" : [
-                "Jane",
-                "B."
-              ]
-            }
-          ],
-          "gender" : "male",
-          "birthDate" : "1951-01-20",
-          "address" : [
-            {
-              "line" : [
-                "234 Anyway St"
-              ],
-              "city" : "Anytown",
-              "postalCode" : "12345",
-              "country" : "US"
-            }
+  "resourceType": "Bundle",
+  "id": "eom-patient-bundle-jane-anyperson",
+  "meta": {
+    "profile": [
+      "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-patient-bundle"
+    ]
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://example.org/fhir/Patient/cancer-patient-jane-anyperson",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "cancer-patient-jane-anyperson",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-cancer-patient"
           ]
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Condition/primary-cancer-condition-breast",
-        "resource" : {
-          "resourceType" : "Condition",
-          "id" : "primary-cancer-condition-breast",
-          "text" : {
-            "status" : "extensions",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_primary-cancer-condition-breast\"> </a><p><b>Generated Narrative: Condition</b><a name=\"primary-cancer-condition-breast\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;primary-cancer-condition-breast&quot; </p></div><p><b>Histology-Morphology-Behavior Extension</b>: Adenocarcinoma (morphologic abnormality) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1187332001)</span></p><p><b>Condition Asserted Date</b>: 2019-04-01</p><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span></p><p><b>code</b>: Primary malignant neoplasm of female left breast (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#353431000119107)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>asserter</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><h3>Stages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Summary</b></td><td><b>Assessment</b></td></tr><tr><td style=\"display: none\">*</td><td>American Joint Committee on Cancer stage IIIC (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1222806003)</span></td><td><a href=\"Observation-tnm-clinical-stage-group-3c.html\">Observation/tnm-clinical-stage-group-3c</a></td></tr></table></div>"
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_cancer-patient-jane-anyperson\"> </a><p><b>Generated Narrative: Patient</b><a name=\"cancer-patient-jane-anyperson\"> </a><a name=\"hccancer-patient-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;cancer-patient-jane-anyperson&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-cancer-patient.html\">EOM Cancer Patient Profile</a></p></div><p><b>US Core Birth Sex Extension</b>: M</p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.5.0/NamingSystem-cmsMBI.html\" title=\"Medicare Beneficiary Identifier (MBI) number is a unique identifier of a beneficiary used for Medicare entitlement and billing purposes. Medicare Beneficiary Identifiers are represented without any spaces or dashes.\">Medicare Beneficiary Identifier (United States)</a>/1CA0CA0CC00, Medical Record Number/MR1234</p><p><b>name</b>: Jane B. Anyperson </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1951-01-20</p><p><b>address</b>: 234 Anyway St Anytown 12345 US </p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-mbi",
+            "value": "1CA0CA0CC00"
           },
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
-              "valueCodeableConcept" : {
-                "coding" : [
-                  {
-                    "system" : "http://snomed.info/sct",
-                    "code" : "1187332001",
-                    "display" : "Adenocarcinoma (morphologic abnormality)"
-                  }
-                ]
-              }
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
             },
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-              "valueDateTime" : "2019-04-01"
-            }
-          ],
-          "clinicalStatus" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                "code" : "active",
-                "display" : "Active"
-              }
+            "system": "http://hospital.example.org",
+            "value": "MR1234"
+          }
+        ],
+        "name": [
+          {
+            "family": "Anyperson",
+            "given": [
+              "Jane",
+              "B."
             ]
-          },
-          "verificationStatus" : {
-            "coding" : [
-              {
-                "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-                "code" : "confirmed",
-                "display" : "Confirmed"
-              }
-            ]
-          },
-          "category" : [
-            {
-              "coding" : [
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1951-01-20",
+        "address": [
+          {
+            "line": [
+              "234 Anyway St"
+            ],
+            "city": "Anytown",
+            "postalCode": "12345",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Condition/primary-cancer-condition-breast",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "primary-cancer-condition-breast",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-primary-cancer-condition"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_primary-cancer-condition-breast\"> </a><p><b>Generated Narrative: Condition</b><a name=\"primary-cancer-condition-breast\"> </a><a name=\"hcprimary-cancer-condition-breast\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;primary-cancer-condition-breast&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-primary-cancer-condition.html\">EOM Primary Cancer Condition Profile</a></p></div><p><b>Histology-Morphology-Behavior Extension</b>: Adenocarcinoma (morphologic abnormality) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1187332001)</span></p><p><b>Condition Asserted Date</b>: 2019-04-01</p><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span></p><p><b>code</b>: Primary malignant neoplasm of female left breast (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#353431000119107)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>asserter</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><h3>Stages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Summary</b></td><td><b>Assessment</b></td></tr><tr><td style=\"display: none\">*</td><td>American Joint Committee on Cancer stage IIIC (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1222806003)</span></td><td><a href=\"Observation-tnm-clinical-stage-group-3c.html\">Observation/tnm-clinical-stage-group-3c</a></td></tr></table></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
+            "valueCodeableConcept": {
+              "coding": [
                 {
-                  "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-                  "code" : "problem-list-item"
+                  "system": "http://snomed.info/sct",
+                  "code": "1187332001",
+                  "display": "Adenocarcinoma (morphologic abnormality)"
                 }
               ]
             }
-          ],
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "353431000119107",
-                "display" : "Primary malignant neoplasm of female left breast (disorder)"
-              }
-            ]
           },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "asserter" : {
-            "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
-          },
-          "stage" : [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2019-04-01"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
             {
-              "summary" : {
-                "coding" : [
-                  {
-                    "system" : "http://snomed.info/sct",
-                    "code" : "1222806003",
-                    "display" : "American Joint Committee on Cancer stage IIIC (qualifier value)"
-                  }
-                ]
-              },
-              "assessment" : [
-                {
-                  "reference" : "Observation/tnm-clinical-stage-group-3c"
-                }
-              ]
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
             }
           ]
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/cancer-disease-status-jane-anyperson",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "cancer-disease-status-jane-anyperson",
-          "text" : {
-            "status" : "extensions",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_cancer-disease-status-jane-anyperson\"> </a><p><b>Generated Narrative: Observation</b><a name=\"cancer-disease-status-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;cancer-disease-status-jane-anyperson&quot; </p></div><p><b>Cancer Disease Status Evidence Type Extension</b>: Imaging (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#363679005)</span></p><p><b>status</b>: final</p><p><b>code</b>: Cancer Disease Progression <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#97509-4)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>focus</b>: <a href=\"#Condition_primary-cancer-condition-breast\">See above (Condition/primary-cancer-condition-breast)</a></p><p><b>effective</b>: 2018-11-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: Patient's condition improved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#268910001)</span></p></div>"
-          },
-          "extension" : [
+        },
+        "verificationStatus": {
+          "coding": [
             {
-              "url" : "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type",
-              "valueCodeableConcept" : {
-                "coding" : [
-                  {
-                    "system" : "http://snomed.info/sct",
-                    "code" : "363679005",
-                    "display" : "Imaging (procedure)"
-                  }
-                ]
-              }
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
             }
-          ],
-          "status" : "final",
-          "code" : {
-            "coding" : [
+          ]
+        },
+        "category": [
+          {
+            "coding": [
               {
-                "system" : "http://loinc.org",
-                "code" : "97509-4",
-                "display" : "Cancer Disease Progression"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "focus" : [
-            {
-              "reference" : "Condition/primary-cancer-condition-breast"
-            }
-          ],
-          "effectiveDateTime" : "2018-11-01",
-          "performer" : [
-            {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
-            }
-          ],
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "268910001",
-                "display" : "Patient's condition improved (finding)"
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
               }
             ]
           }
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-cT3",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "tnm-clinical-primary-tumor-category-cT3",
-          "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-primary-tumor-category-cT3\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-primary-tumor-category-cT3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-primary-tumor-category-cT3&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: cT category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399504009)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cT3 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1228938002)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
-          },
-          "status" : "final",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "399504009",
-                "display" : "cT category"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "effectiveDateTime" : "2019-04-01",
-          "performer" : [
+        ],
+        "code": {
+          "coding": [
             {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
+              "system": "http://snomed.info/sct",
+              "code": "353431000119107",
+              "display": "Primary malignant neoplasm of female left breast (disorder)"
             }
-          ],
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "1228938002",
-                "display" : "American Joint Committee on Cancer cT3 (qualifier value)"
-              }
-            ]
-          },
-          "method" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "897275008",
-                "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-cN3",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "tnm-clinical-regional-nodes-category-cN3",
-          "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-regional-nodes-category-cN3\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-regional-nodes-category-cN3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-regional-nodes-category-cN3&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: cN category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399534004)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cN3 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1229984001)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
-          },
-          "status" : "final",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "399534004",
-                "display" : "cN category"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "effectiveDateTime" : "2019-04-01",
-          "performer" : [
-            {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
-            }
-          ],
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "1229984001",
-                "display" : "American Joint Committee on Cancer cN3 (qualifier value)"
-              }
-            ]
-          },
-          "method" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "897275008",
-                "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-cM0",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "tnm-clinical-distant-metastases-category-cM0",
-          "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-distant-metastases-category-cM0\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-distant-metastases-category-cM0\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-distant-metastases-category-cM0&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: cM category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399387003)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cM0 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1229901006)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
-          },
-          "status" : "final",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "399387003",
-                "display" : "cM category"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "effectiveDateTime" : "2019-04-01",
-          "performer" : [
-            {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
-            }
-          ],
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "1229901006",
-                "display" : "American Joint Committee on Cancer cM0 (qualifier value)"
-              }
-            ]
-          },
-          "method" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "897275008",
-                "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/tumor-marker-test-er-jane-anyperson",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "tumor-marker-test-er-jane-anyperson",
-          "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tumor-marker-test-er-jane-anyperson\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tumor-marker-test-er-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tumor-marker-test-er-jane-anyperson&quot; </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#85337-4)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>effective</b>: 2018-11-16</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA6576-8)</span></p></div>"
-          },
-          "status" : "final",
-          "category" : [
-            {
-              "coding" : [
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "asserter": {
+          "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+        },
+        "stage": [
+          {
+            "summary": {
+              "coding": [
                 {
-                  "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                  "code" : "laboratory"
+                  "system": "http://snomed.info/sct",
+                  "code": "1222806003",
+                  "display": "American Joint Committee on Cancer stage IIIC (qualifier value)"
+                }
+              ]
+            },
+            "assessment": [
+              {
+                "reference": "Observation/tnm-clinical-stage-group-3c"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/cancer-disease-status-jane-anyperson",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cancer-disease-status-jane-anyperson",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-cancer-disease-status"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_cancer-disease-status-jane-anyperson\"> </a><p><b>Generated Narrative: Observation</b><a name=\"cancer-disease-status-jane-anyperson\"> </a><a name=\"hccancer-disease-status-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;cancer-disease-status-jane-anyperson&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-cancer-disease-status.html\">EOM Cancer Disease Status Profile</a></p></div><p><b>Cancer Disease Status Evidence Type Extension</b>: Imaging (procedure) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#363679005)</span></p><p><b>status</b>: final</p><p><b>code</b>: Cancer Disease Progression <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#97509-4)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>focus</b>: See on this page: Condition/primary-cancer-condition-breast</p><p><b>effective</b>: 2018-11-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: Patient's condition improved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#268910001)</span></p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "363679005",
+                  "display": "Imaging (procedure)"
                 }
               ]
             }
-          ],
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "85337-4",
-                "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "effectiveDateTime" : "2018-11-16",
-          "performer" : [
-            {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
-            }
-          ],
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
-                "system" : "http://loinc.org",
-                "code" : "LA6576-8",
-                "display" : "Positive"
-              }
-            ]
           }
-        }
-      },
-      {
-        "fullUrl" : "http://example.org/fhir/Observation/no-history-of-metastatic-cancer",
-        "resource" : {
-          "resourceType" : "Observation",
-          "id" : "no-history-of-metastatic-cancer",
-          "text" : {
-            "status" : "generated",
-            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_no-history-of-metastatic-cancer\"> </a><p><b>Generated Narrative: Observation</b><a name=\"no-history-of-metastatic-cancer\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;no-history-of-metastatic-cancer&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: History of metastatic malignant neoplasm (situation) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1287652008)</span></p><p><b>subject</b>: <a href=\"#Patient_cancer-patient-jane-anyperson\">See above (Patient/cancer-patient-jane-anyperson)</a></p><p><b>effective</b>: 2018-11-16</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: false</p></div>"
-          },
-          "status" : "final",
-          "code" : {
-            "coding" : [
-              {
-                "system" : "http://snomed.info/sct",
-                "code" : "1287652008",
-                "display" : "History of metastatic malignant neoplasm (situation)"
-              }
-            ]
-          },
-          "subject" : {
-            "reference" : "Patient/cancer-patient-jane-anyperson"
-          },
-          "effectiveDateTime" : "2018-11-16",
-          "performer" : [
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
             {
-              "reference" : "Practitioner/us-core-practitioner-kyle-anydoc"
+              "system": "http://loinc.org",
+              "code": "97509-4",
+              "display": "Cancer Disease Progression"
             }
-          ],
-          "valueBoolean" : false
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "focus": [
+          {
+            "reference": "Condition/primary-cancer-condition-breast"
+          }
+        ],
+        "effectiveDateTime": "2018-11-01",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "268910001",
+              "display": "Patient's condition improved (finding)"
+            }
+          ]
         }
       }
-    ]
-  }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-cT3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tnm-clinical-primary-tumor-category-cT3",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-tnm-primary-tumor-category"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-primary-tumor-category-cT3\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-primary-tumor-category-cT3\"> </a><a name=\"hctnm-clinical-primary-tumor-category-cT3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-primary-tumor-category-cT3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-tnm-primary-tumor-category.html\">EOM TNM Primary Tumor Category Profile</a></p></div><p><b>status</b>: final</p><p><b>code</b>: cT category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399504009)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cT3 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1228938002)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399504009",
+              "display": "cT category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "effectiveDateTime": "2019-04-01",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1228938002",
+              "display": "American Joint Committee on Cancer cT3 (qualifier value)"
+            }
+          ]
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "897275008",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-cN3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tnm-clinical-regional-nodes-category-cN3",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-tnm-distant-metastasis-category"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-regional-nodes-category-cN3\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-regional-nodes-category-cN3\"> </a><a name=\"hctnm-clinical-regional-nodes-category-cN3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-regional-nodes-category-cN3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-tnm-distant-metastasis-category.html\">EOM TNM Distant Metastasis Category Profile</a></p></div><p><b>status</b>: final</p><p><b>code</b>: cN category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399534004)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cN3 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1229984001)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399534004",
+              "display": "cN category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "effectiveDateTime": "2019-04-01",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1229984001",
+              "display": "American Joint Committee on Cancer cN3 (qualifier value)"
+            }
+          ]
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "897275008",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-cM0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tnm-clinical-distant-metastases-category-cM0",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-tnm-distant-metastasis-category"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tnm-clinical-distant-metastases-category-cM0\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tnm-clinical-distant-metastases-category-cM0\"> </a><a name=\"hctnm-clinical-distant-metastases-category-cM0\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tnm-clinical-distant-metastases-category-cM0&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-tnm-distant-metastasis-category.html\">EOM TNM Distant Metastasis Category Profile</a></p></div><p><b>status</b>: final</p><p><b>code</b>: cM category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399387003)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: American Joint Committee on Cancer cM0 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1229901006)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#897275008)</span></p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399387003",
+              "display": "cM category"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "effectiveDateTime": "2019-04-01",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1229901006",
+              "display": "American Joint Committee on Cancer cM0 (qualifier value)"
+            }
+          ]
+        },
+        "method": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "897275008",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/tumor-marker-test-er-jane-anyperson",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tumor-marker-test-er-jane-anyperson",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-tumor-marker-test"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_tumor-marker-test-er-jane-anyperson\"> </a><p><b>Generated Narrative: Observation</b><a name=\"tumor-marker-test-er-jane-anyperson\"> </a><a name=\"hctumor-marker-test-er-jane-anyperson\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;tumor-marker-test-er-jane-anyperson&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-tumor-marker-test.html\">EOM Tumor Marker Test</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#85337-4)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>effective</b>: 2018-11-16</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA6576-8)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85337-4",
+              "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "effectiveDateTime": "2018-11-16",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA6576-8",
+              "display": "Positive"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/no-history-of-metastatic-cancer",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "no-history-of-metastatic-cancer",
+        "meta": {
+          "profile": [
+            "https://globalalliantinc.com/enhancing-oncology-model/StructureDefinition/eom-history-of-metastatic-cancer"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_no-history-of-metastatic-cancer\"> </a><p><b>Generated Narrative: Observation</b><a name=\"no-history-of-metastatic-cancer\"> </a><a name=\"hcno-history-of-metastatic-cancer\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;no-history-of-metastatic-cancer&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-eom-history-of-metastatic-cancer.html\">EOM History of Metastatic Cancer</a></p></div><p><b>status</b>: final</p><p><b>code</b>: History of metastatic malignant neoplasm (situation) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1287652008)</span></p><p><b>subject</b>: See on this page: Patient/cancer-patient-jane-anyperson</p><p><b>effective</b>: 2018-11-16</p><p><b>performer</b>: <a href=\"Practitioner-us-core-practitioner-kyle-anydoc.html\">Practitioner/us-core-practitioner-kyle-anydoc</a> &quot; ANYDOC&quot;</p><p><b>value</b>: false</p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1287652008",
+              "display": "History of metastatic malignant neoplasm (situation)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cancer-patient-jane-anyperson"
+        },
+        "effectiveDateTime": "2018-11-16",
+        "performer": [
+          {
+            "reference": "Practitioner/us-core-practitioner-kyle-anydoc"
+          }
+        ],
+        "valueBoolean": false
+      }
+    }
+  ]
+}
