@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     eom_test_kit (0.1.0)
-      inferno_core (~> 0.4.34)
+      inferno_core (~> 0.4.38)
 
 GEM
   remote: https://rubygems.org/
@@ -85,12 +85,12 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.17.0-aarch64-linux-gnu)
-    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-aarch64-linux)
+    ffi (1.17.0-arm-linux)
     ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux)
     ffi (1.17.0-x86_64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux)
     fhir_client (5.0.3)
       activesupport (>= 3)
       addressable (>= 2.3)
