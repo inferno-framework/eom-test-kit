@@ -36,8 +36,20 @@ module EOMTestKit
         id :eom_test_suite
         version EOM_VERSION
 
-        validator do
-            url ENV.fetch('VALIDATOR_URL', 'http://validator_service:4567')
+        VALIDATION_MESSAGE_FILTERS = [
+            /\A\S+: \S+: URL value '.*' does not resolve/
+        ].freeze
+
+        fhir_resource_validator do
+            igs 'igs/package-eom-v0-1-0-may14.tgz'
+
+            cli_context do
+                allowExampleUrls true
+            end
+
+            exclude_message do |message|
+                VALIDATION_MESSAGE_FILTERS.any? { |filter| filter.match? message.message }
+            end
         end
 
         # Example urls generated here

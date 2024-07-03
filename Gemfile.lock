@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     eom_test_kit (0.1.0)
-      inferno_core (~> 0.4.34)
+      inferno_core (~> 0.4.38)
 
 GEM
   remote: https://rubygems.org/
