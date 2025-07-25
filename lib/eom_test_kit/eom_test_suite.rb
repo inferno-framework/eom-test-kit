@@ -34,7 +34,6 @@ module EOMTestKit
         )
 
         id :eom_test_suite
-        version EOM_VERSION
 
         VALIDATION_MESSAGE_FILTERS = [
             /\A\S+: \S+: URL value '.*' does not resolve/
@@ -71,6 +70,10 @@ module EOMTestKit
             {
                 label: 'Open Source',
                 url: 'https://github.com/inferno-framework/eom-test-kit'
+            },
+            {
+                label: 'Download',
+                url: 'https://github.com/inferno-framework/eom-test-kit/releases'
             },
             {
                 label: 'Enhancing Oncology Model IG',

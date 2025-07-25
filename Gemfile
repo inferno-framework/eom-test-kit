@@ -7,5 +7,6 @@ gemspec
 group :development, :test do
   gem 'debug'
   gem 'foreman'
+  gem 'rack-test', '~> 2.1'
   gem 'rerun'
 end
